@@ -14,5 +14,10 @@ public class UserService {
     public UserDTO getUserByUsername(String username) {
         return userMapper.findByUsername(username);
     }
+
+    public void registerUser(UserDTO user) {
+        userMapper.insertUser(user);
+    }
+
 }
 

@@ -20,5 +20,9 @@
         FROM users
         WHERE username = #{username}
     </select>
+    <insert id="insertUser" parameterType="com.org.userproject.UserDTO">
+        INSERT INTO users (username, password, email, created_at)
+        VALUES (#{username}, #{password}, #{email}, NOW())
+    </insert>
 
 </mapper>
