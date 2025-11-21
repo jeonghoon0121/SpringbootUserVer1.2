@@ -2,10 +2,10 @@ CREATE USER 'ohgiraffers'@'%' IDENTIFIED BY 'ohgiraffers';
 SHOW databases;
 USE mysql;
 SELECT * FROM USER;
-DROP DATABASE cinemadb;
+DROP DATABASE userdb;
 
-CREATE DATABASE cinemadb;
-GRANT ALL PRIVILEGES ON cinemadb.* TO 'ohgiraffers'@'%';
+CREATE DATABASE userdb;
+GRANT ALL PRIVILEGES ON userdb.* TO 'ohgiraffers'@'%';
 SHOW GRANTS FOR 'ohgiraffers'@'%';
 USE userdb;
 SHOW TABLES;
@@ -26,4 +26,3 @@ VALUES ('jeonghoon', '1234', 'jeonghoon@example.com', '2025-11-09 22:01:13'),
 SELECT user_id, username, password, email, created_at
 FROM users
 WHERE username = 'jeonghoon';
-
